@@ -13,7 +13,7 @@ jobs:
         run: |
           docker build -t ${{ github.sha }} .
           echo "${{ secrets.DOCKER_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-          docker push ghcr.io/${{ github.repository }}:${{ github.sha }}
+          docker push ${{ github.sha }}
 
       - name: Deploy via API
         run: |
