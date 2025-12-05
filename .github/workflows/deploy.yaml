@@ -17,6 +17,7 @@ jobs:
 
       - name: Deploy via API
         run: |
+
           # curl -X POST https://api.cloudprovider/deploy \
           #   -H "Authorization: Bearer ${{ secrets.CLOUD_TOKEN }}" \
           #   -d "image=ghcr.io/${{ github.repository }}:${{ github.sha }}"
