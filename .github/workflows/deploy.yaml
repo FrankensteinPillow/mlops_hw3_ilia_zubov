@@ -12,6 +12,7 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker build -t ${{ github.sha }} .
+          echo "${{ secrets.PUPA_TOKEN }}"
           echo "${{ secrets.DOCKER_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
           docker push ${{ github.sha }}
 
