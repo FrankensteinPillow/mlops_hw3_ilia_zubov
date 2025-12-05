@@ -14,6 +14,6 @@ RUN apt update && \
 RUN /root/.local/bin/uv self update && \
     /root/.local/bin/uv sync --no-cache
 
-EXPOSE 50051
+EXPOSE 8000
 
-CMD ["/root/.local/bin/uv", "run", "fastapi", "run", "/app/main.py"]
+CMD ["/root/.local/bin/uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0"]

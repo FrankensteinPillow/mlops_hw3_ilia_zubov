@@ -15,5 +15,8 @@ run:
 run_docker:
 	docker rm -f hw3 && docker run --name hw3 -p 8000:8000 hw3
 
+compose:
+	docker compose -f docker-compose.blue.yaml -f docker-compose.green.yaml -f docker-compose.nginx.yaml up
+
 format:
 	ruff check --select I,F401 --fix . && ruff format --line-length 79 .
