@@ -8,5 +8,6 @@ dependencies = [
     "fastapi[standard,uvicorn]>=0.123.9",
     "numpy>=2.3.5",
     "pydantic-settings>=2.12.0",
+    "ruff>=0.14.8",
     "scikit-learn>=1.7.2",
 ]
