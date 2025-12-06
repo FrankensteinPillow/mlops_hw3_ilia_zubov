@@ -1,6 +1,3 @@
-# mlops_hw3_ilia_zubov
-Домашнее задание № 3 по предмету "Модели ML в продакшен".
-
 ## Цель проекта
 
 Научиться применять стратегии безопасного развертывания (Blue-Green и Canary) для ML-моделей и автоматизировать процесс деплоя через CI/CD (GitHub Actions).
@@ -89,9 +86,11 @@ docker compose -f docker-compose.blue.yaml -f docker-compose.green.yaml -f docke
 Для проверки работоспособности Blue/Grean маршрутизации с весами 9 и 1
 ![Health checks](./md_src/health_requests.png)
 
+### Проверка /predict
+![Predict](./md_src/predict.png)
+
 ### Сохранённые secrets для хранения приватных данных
 ![Secrets](./md_src/secrets.png)
-
 
 ### Пример успешно прошедшего пайплайна в GitHub actions
 ![Action](./md_src/actions.png)
