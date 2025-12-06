@@ -1,10 +1,10 @@
 predict:
-	curl -X POST 127.0.0.1:8000/predict \
+	curl -X POST 127.0.0.1:8086/predict \
 	-H "content-type:application/json" \
 	-d '{"sepal_length": 1.3, "sepal_width": 2.1, "petal_length": 2.2, "petal_width": 0.8}'
 
 check_health:
-	curl 127.0.0.1:8000/health
+	curl 127.0.0.1:8086/health
 
 build:
 	docker build -t hw3 .
